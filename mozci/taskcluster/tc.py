@@ -114,7 +114,7 @@ class TaskClusterManager(BaseCIManager):
 
         # Satisfying mustache template variables in YML file
         # We must account for both the old and new style of arg passing
-        if action_args:
+        if action_args and "{{action_args}}" in action_task:
             action_args = " ".join(["--{}='{}'".format(k, v) for k, v in action_args.items()])
             action_task = action_task.replace("{{action_args}}", action_args)
         else:
