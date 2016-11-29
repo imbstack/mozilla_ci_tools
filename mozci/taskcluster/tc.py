@@ -102,7 +102,7 @@ class TaskClusterManager(BaseCIManager):
         else:
             LOG.info("We did not schedule anything because we're running on dry run mode.")
 
-    def schedule_action_task(self, decision_task_id=None, task_labels=None, action_args=None):
+    def schedule_action_task(self, decision_task_id, task_labels=None, action_args=None):
         """
         Function which will be used to schedule an action task.
         Action Tasks use in-tree logic to schedule the task_labels
