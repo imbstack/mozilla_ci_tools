@@ -10,8 +10,8 @@ from mock import Mock, patch
 
 # Current tool
 from mozci.taskcluster import (
-    TaskClusterManager,
     TC_SCHEMA_URL,
+    TaskClusterManager,
     credentials_available,
     generate_metadata,
     validate_schema,
